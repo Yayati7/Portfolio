@@ -35,7 +35,7 @@ const certifications = [
     title: "Certificate of Completion(Web Dev)",
     issuer: "Apna College",
     year: "2025",
-    link: "https://mycourse.app/HfvUmwIr8Wa0rz90C" // Replace with actual certificate link
+    link: "https://mycourse.app/HfvUmwIr8Wa0rz90C" 
   },
   {
     title: "Coding Interview Preparation",
