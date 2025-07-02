@@ -32,6 +32,12 @@ const skills = {
 
 const certifications = [
   {
+    title: "Certificate of Completion(Web Dev)",
+    issuer: "Apna College",
+    year: "2025",
+    link: "https://mycourse.app/HfvUmwIr8Wa0rz90C" // Replace with actual certificate link
+  },
+  {
     title: "Coding Interview Preparation",
     issuer: "Coursera",
     year: "2025",
@@ -40,7 +46,7 @@ const certifications = [
   {
     title: "Data Structures",
     issuer: "Coursera", 
-    year: "2025",
+    year: "2024",
     link: "https://coursera.org/share/8b4b9cc7370203cd72f4fb30a586d14a" // Replace with actual certificate link
   }
 ];
@@ -370,9 +376,6 @@ const App = () => {
             <FaChevronDown size={24} className={darkMode ? "text-zinc-400" : "text-zinc-600"} />
           </motion.div>
         </section>
-
-        
-
 
         <SectionSeparator darkMode={darkMode} />
 
