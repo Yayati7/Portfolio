@@ -7,6 +7,14 @@ import { Sun, Moon } from "lucide-react";
 const projects = [
   {
     title: "WanderLust",
+    desc: "Full-stack real-time video conferencing web application for hosting secure online meetings with live video, audio, chat, and screen sharing. Developed a real-time video conferencing platform using WebRTC, Socket.IO and MERN. Implemented peer-to-peer WebRTC mesh architecture with Socket.IO-based signaling for multi-user video calls",
+    repo: "https://github.com/Yayati7/MeetNest",
+    live: "https://meetnestfrontend.onrender.com/",
+    tech: ["WebRTC", "Socket.IO", "MERN"],
+    date: "Dec'25"
+  },
+   {
+    title: "WanderLust",
     desc: "Full-Stack travel web app to explore, add and view travel destinations on an interactive map. Developed a feature-rich travel website using Node.js, Express.js, MongoDB, and Mapbox API. Users can explore, add, and manage travel listings with geospatial visualization. Implemented RESTful routing, dynamic data handling, and a responsive UI using Bootstrap.",
     repo: "https://github.com/Yayati7/WanderLust",
     live: "https://wanderlust-r0x5.onrender.com/listings",
@@ -24,10 +32,11 @@ const projects = [
 ];
 
 const skills = {
-  "Programming Languages": ["C++", "C", "Java", "Python", "JavaScript"],
-  "Web Technologies & Framework": ["Node.js", "React"],
+  "Programming Languages": ["C++", "C", "Java", "JavaScript"],
+  "Web Technologies & Framework": ["Node.js", "React", "Express.js"],
+  "Real Time and Communication": ["WebRTC", "Socket.IO", "Peer-to-Peer Communication"],
   "Databases": ["MongoDB", "MySQL"],
-  "Other Skills": ["Full Stack Web Development", "MERN Stack", "Git"]
+  "Other Skills": ["RESTful APIs", "Authentication & Authorization", "MERN Stack", "Git"]
 };
 
 const certifications = [
@@ -55,7 +64,7 @@ const education = [
   {
     institution: "Manipal Institute of Technology Bengaluru (MIT Blr), India",
     degree: "CSE Core",
-    grade: "CGPA: 6.93",
+    grade: "CGPA: 7.01",
     duration: "2023 - 2027 (expected)"
   },
   {
