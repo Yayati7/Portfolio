@@ -6,7 +6,7 @@ import { Sun, Moon } from "lucide-react";
 
 const projects = [
   {
-    title: "WanderLust",
+    title: "MeetNest",
     desc: "Full-stack real-time video conferencing web application for hosting secure online meetings with live video, audio, chat, and screen sharing. Developed a real-time video conferencing platform using WebRTC, Socket.IO and MERN. Implemented peer-to-peer WebRTC mesh architecture with Socket.IO-based signaling for multi-user video calls",
     repo: "https://github.com/Yayati7/MeetNest",
     live: "https://meetnestfrontend.onrender.com/",
