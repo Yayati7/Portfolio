@@ -10,7 +10,7 @@ const projects = [
     desc: "Full-stack real-time video conferencing web application for hosting secure online meetings with live video, audio, chat, and screen sharing. Developed a real-time video conferencing platform using WebRTC, Socket.IO and MERN. Implemented peer-to-peer WebRTC mesh architecture with Socket.IO-based signaling for multi-user video calls",
     repo: "https://github.com/Yayati7/MeetNest",
     live: "https://meetnestfrontend.onrender.com/",
-    tech: ["WebRTC", "Socket.IO", "MERN"],
+    tech: ["WebRTC", "Socket.IO", "MERN", "Docker", "Github Actions(CI/CD)", "AWS EC2"],
     date: "Dec'25"
   },
    {
@@ -18,7 +18,7 @@ const projects = [
     desc: "Full-Stack travel web app to explore, add and view travel destinations on an interactive map. Developed a feature-rich travel website using Node.js, Express.js, MongoDB, and Mapbox API. Users can explore, add, and manage travel listings with geospatial visualization. Implemented RESTful routing, dynamic data handling, and a responsive UI using Bootstrap.",
     repo: "https://github.com/Yayati7/WanderLust",
     live: "https://wanderlust-r0x5.onrender.com/listings",
-    tech: ["Node.js", "Express.js", "MongoDB", "Mapbox API", "Bootstrap"],
+    tech: ["Node.js", "Express.js", "MongoDB", "Mapbox API","Apache Kafka ", "Confluent Cloud (Managed Kafka)"],
     date: "June'25"
   },
   {
@@ -33,10 +33,13 @@ const projects = [
 
 const skills = {
   "Programming Languages": ["C++", "C", "Java", "JavaScript"],
-  "Web Technologies & Framework": ["Node.js", "React", "Express.js"],
-  "Real Time and Communication": ["WebRTC", "Socket.IO", "Peer-to-Peer Communication"],
+  "Web Development": ["Node.js", "React", "Express.js", "HTML", "CSS"],
+  "Real Time & Event-Driven Systems": ["WebRTC", "Socket.IO", "Peer-to-Peer Communication"],
+  "Event-Driven Backend Systems": ["Apache Kafka", "Kafka Producers & Consumers", " Event-Based Processing"],
   "Databases": ["MongoDB", "MySQL"],
-  "Other Skills": ["RESTful APIs", "Authentication & Authorization", "MERN Stack", "Git"]
+  "Deployment & Automation" : ["Docker(basic)", "Docker Compose", "GitHub Actions(basic CI/CD)", "AWS EC2 (basic deployment)"],
+  "Cloud & Backend Infrastructure" : ["Confluent Cloud (Managed Kafka)"], 
+  "Other Skills": ["RESTful APIs", "Authentication & Authorization", "Git"]
 };
 
 const certifications = [
