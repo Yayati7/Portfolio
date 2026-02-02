@@ -67,7 +67,7 @@ const education = [
   {
     institution: "Manipal Institute of Technology Bengaluru (MIT Blr), India",
     degree: "CSE Core",
-    grade: "CGPA: 7.01",
+    grade: "CGPA: 7.03",
     duration: "2023 - 2027 (expected)"
   },
   {
