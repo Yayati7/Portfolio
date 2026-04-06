@@ -6,6 +6,14 @@ import { Sun, Moon } from "lucide-react";
 
 const projects = [
   {
+    title: "MicroGuard AI",
+    desc: "AI-powered microservices platform for analyzing distributed system architectures with automated risk detection and recommendations.",
+    repo: "https://github.com/Yayati7/MicroGuardAI",
+    live: "https://34.14.214.173.nip.io/",
+    tech: ["Java", "Spring Boot", "Spring Cloud (Eureka, Config Server, API Gateway)", "Apache Kafka", "Mistral API", "Keycloak OAuth2 Google SSO", "Docker + GCP"],
+    date: "Mar'26"
+  },
+  {
     title: "MeetNest",
     desc: "Full-stack real-time video conferencing web application for hosting secure online meetings with live video, audio, chat, and screen sharing. Developed a real-time video conferencing platform using WebRTC, Socket.IO and MERN. Implemented peer-to-peer WebRTC mesh architecture with Socket.IO-based signaling for multi-user video calls",
     repo: "https://github.com/Yayati7/MeetNest",
@@ -33,13 +41,12 @@ const projects = [
 
 const skills = {
   "Programming Languages": ["C++", "C", "Java", "JavaScript"],
-  "Web Development": ["Node.js", "React", "Express.js", "HTML", "CSS"],
-  "Real Time & Event-Driven Systems": ["WebRTC", "Socket.IO", "Peer-to-Peer Communication"],
-  "Event-Driven Backend Systems": ["Apache Kafka", "Kafka Producers & Consumers", " Event-Based Processing"],
-  "Databases": ["MongoDB", "MySQL"],
-  "Deployment & Automation" : ["Docker(basic)", "Docker Compose", "GitHub Actions(basic CI/CD)", "AWS EC2 (basic deployment)"],
-  "Cloud & Backend Infrastructure" : ["Confluent Cloud (Managed Kafka)"], 
-  "Other Skills": ["RESTful APIs", "Authentication & Authorization", "Git"]
+  "Cloud & Backend Infrastructure": [" Microservice Architecture", "Distributed Systems"],
+  "Real Time & Event-Driven Systems": ["WebRTC", "Socket.IO", "Apache Kafka"],
+  "Event-Driven Backend Systems": ["Spring Boot", "Spring Cloud (Eureka / API Gateway / Config Server)"],
+  "Databases": ["MongoDB", "PostgreSQL"],
+  "Deployment & Automation" : ["Docker(basic)", "Docker Compose", "GitHub Actions(basic CI/CD)", "AWS EC2 (basic deployment)", "GCP"],
+  "Other Skills": ["RESTful APIs", "Authentication & Authorization(Keycloak)", "Git", "REST-based AI Services", "OS", "CN", "DSA"]
 };
 
 const certifications = [
