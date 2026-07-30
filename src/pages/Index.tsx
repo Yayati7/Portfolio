@@ -1,8 +1,26 @@
-
 import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { FaLinkedin, FaGithub, FaChevronDown, FaCode, FaExternalLinkAlt, FaEnvelope, FaPhone } from "react-icons/fa";
 import { Sun, Moon } from "lucide-react";
+
+const experience = [
+  {
+    role: "Software Engineer Intern",
+    company: "IIT Delhi",
+    guide: "Guided by Prof. Sudeep Narayan Banerjee",
+    project: "IntelliHire: Hybrid Explainable AI Job Recommendation Platform",
+    duration: "May'26 - Jul'26",
+    certificate: "https://drive.google.com/file/d/1k8Wikr4qpmYn8ePNe_V96kpke0iK2Ekd/view?usp=sharing",
+    points: [
+      "Designed & built IntelliHire, a hybrid AI job-recommendation platform, on 8 Spring Boot microservices with Eureka discovery and an API Gateway.",
+      "Built a hybrid ML pipeline (FastAPI, PyTorch, Sentence-Transformers) fusing semantic similarity, skill match, and a trained prediction score into one explainable result.",
+      "Developed the full React 19 frontend (3 role-based portals) and implemented JWT/OAuth2 auth with Redis-backed brute-force protection.",
+      "Built a live cross-service log dashboard and containerized all 10 services with Docker, evaluating Kubernetes vs. single-VM deployment.",
+      "Took ownership beyond development — requirement analysis, technical documentation, deployment-strategy & cost evaluation (Kubernetes vs. single-VM), and live demos/presentations to the faculty guide."
+    ],
+    tech: ["Spring Boot", "Eureka", "API Gateway", "FastAPI", "PyTorch", "Sentence-Transformers", "React 19", "JWT/OAuth2", "Redis", "Docker", "Kubernetes"]
+  }
+];
 
 const projects = [
   {
@@ -92,7 +110,7 @@ const education = [
 ];
 
 const Navbar = ({ toggleTheme, darkMode, activeSection }) => {
-  const sections = ["intro", "skills", "projects", "education", "certificates", "contact"];
+  const sections = ["intro", "skills", "experience", "projects", "education", "certificates", "contact"];
   
   return (
     <motion.nav
@@ -243,7 +261,7 @@ const App = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["intro", "skills", "projects", "education", "certificates", "contact"];
+      const sections = ["intro", "skills", "experience", "projects", "education", "certificates", "contact"];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -449,6 +467,103 @@ const App = () => {
                 </motion.div>
               ))}
             </motion.div>
+          </div>
+        </section>
+
+        <SectionSeparator darkMode={darkMode} />
+
+        {/* Experience Section */}
+        <section id="experience" className="py-20 px-6">
+          <div className="max-w-4xl mx-auto">
+            <motion.h2
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className={`text-5xl md:text-6xl font-bold mb-16 text-center ${
+                darkMode ? "text-white" : "text-zinc-900"
+              }`}
+            >
+              Experience
+            </motion.h2>
+
+            <div className="space-y-8">
+              {experience.map((exp, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ y: 60, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.2, duration: 0.8, ease: "easeOut" }}
+                  whileHover={{ scale: 1.01 }}
+                >
+                  <ProfessionalCard darkMode={darkMode}>
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
+                      <h3 className={`text-2xl font-bold ${
+                        darkMode ? "text-zinc-100" : "text-zinc-800"
+                      }`}>
+                        {exp.role} — {exp.company}
+                      </h3>
+                      <span className={`text-sm whitespace-nowrap ${
+                        darkMode ? "text-zinc-400" : "text-zinc-600"
+                      }`}>
+                        {exp.duration}
+                      </span>
+                    </div>
+
+                    <p className={`text-sm mb-1 italic ${
+                      darkMode ? "text-zinc-400" : "text-zinc-500"
+                    }`}>
+                      {exp.guide}
+                    </p>
+                    <p className={`text-lg font-medium mb-4 ${
+                      darkMode ? "text-zinc-200" : "text-zinc-700"
+                    }`}>
+                      {exp.project}
+                    </p>
+
+                    <ul className={`list-disc list-outside pl-5 space-y-2 mb-6 ${
+                      darkMode ? "text-zinc-300" : "text-zinc-600"
+                    }`}>
+                      {exp.points.map((point, pointIndex) => (
+                        <li key={pointIndex}>{point}</li>
+                      ))}
+                    </ul>
+
+                    <div className="mb-6">
+                      <div className="flex flex-wrap gap-2">
+                        {exp.tech.map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className={`px-3 py-1 rounded-full text-sm font-medium ${
+                              darkMode
+                                ? "bg-zinc-700 text-zinc-300 border border-zinc-600"
+                                : "bg-zinc-100 text-zinc-700 border border-zinc-200"
+                            }`}
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <motion.a
+                      href={exp.certificate}
+                      target="_blank"
+                      rel="noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                        darkMode
+                          ? "bg-zinc-700 hover:bg-zinc-600 text-white"
+                          : "bg-zinc-200 hover:bg-zinc-300 text-zinc-800"
+                      }`}
+                    >
+                      View Certificate
+                    </motion.a>
+                  </ProfessionalCard>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
