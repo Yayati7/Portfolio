@@ -110,7 +110,7 @@ const education = [
 ];
 
 const Navbar = ({ toggleTheme, darkMode, activeSection }) => {
-  const sections = ["intro", "skills", "experience", "projects", "education", "certificates", "contact"];
+  const sections = ["intro", "experience", "skills", "projects", "education", "certificates", "contact"];
   
   return (
     <motion.nav
@@ -261,7 +261,7 @@ const App = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["intro", "skills", "experience", "projects", "education", "certificates", "contact"];
+      const sections = ["intro", "experience", "skills", "projects", "education", "certificates", "contact"];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -416,62 +416,6 @@ const App = () => {
 
         <SectionSeparator darkMode={darkMode} />
 
-        {/* Skills Section */}
-        <section id="skills" className="py-20 px-6">
-          <div className="max-w-6xl mx-auto">
-            <motion.h2
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className={`text-5xl md:text-6xl font-bold mb-16 text-center ${
-                darkMode ? "text-white" : "text-zinc-900"
-              }`}
-            >
-              Skills
-            </motion.h2>
-            
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="grid md:grid-cols-2 gap-8"
-            >
-              {Object.entries(skills).map(([category, skillList], index) => (
-                <motion.div
-                  key={category}
-                  variants={itemVariants}
-                >
-                  <ProfessionalCard darkMode={darkMode} className="h-full">
-                    <h3 className={`text-2xl font-bold mb-4 ${
-                      darkMode ? "text-zinc-100" : "text-zinc-800"
-                    }`}>
-                      {category}
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {skillList.map((skill, skillIndex) => (
-                        <span
-                          key={skillIndex}
-                          className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            darkMode
-                              ? "bg-zinc-700 text-zinc-300 border border-zinc-600"
-                              : "bg-zinc-100 text-zinc-700 border border-zinc-200"
-                          }`}
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </ProfessionalCard>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
-
-        <SectionSeparator darkMode={darkMode} />
-
         {/* Experience Section */}
         <section id="experience" className="py-20 px-6">
           <div className="max-w-4xl mx-auto">
@@ -564,6 +508,61 @@ const App = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+        <SectionSeparator darkMode={darkMode} />
+
+        {/* Skills Section */}
+        <section id="skills" className="py-20 px-6">
+          <div className="max-w-6xl mx-auto">
+            <motion.h2
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className={`text-5xl md:text-6xl font-bold mb-16 text-center ${
+                darkMode ? "text-white" : "text-zinc-900"
+              }`}
+            >
+              Skills
+            </motion.h2>
+            
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="grid md:grid-cols-2 gap-8"
+            >
+              {Object.entries(skills).map(([category, skillList], index) => (
+                <motion.div
+                  key={category}
+                  variants={itemVariants}
+                >
+                  <ProfessionalCard darkMode={darkMode} className="h-full">
+                    <h3 className={`text-2xl font-bold mb-4 ${
+                      darkMode ? "text-zinc-100" : "text-zinc-800"
+                    }`}>
+                      {category}
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {skillList.map((skill, skillIndex) => (
+                        <span
+                          key={skillIndex}
+                          className={`px-3 py-1 rounded-full text-sm font-medium ${
+                            darkMode
+                              ? "bg-zinc-700 text-zinc-300 border border-zinc-600"
+                              : "bg-zinc-100 text-zinc-700 border border-zinc-200"
+                          }`}
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </ProfessionalCard>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </section>
 
